@@ -1,0 +1,29 @@
+[project]
+name = "pypirc-generator"
+version = "1.0.0"
+description = "A desktop + API tool for generating .pypirc for PyPI and TestPyPI authentication"
+authors = [{ name="Leon Priest", email="your.email@example.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE.md" }
+keywords = ["pypi", "upload", "token", "pypirc", "generator", "tkinter", "flask"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Environment :: Win32 (MS Windows)",
+    "Framework :: Flask",
+    "Topic :: Software Development :: Build Tools"
+]
+dependencies = [
+    "Flask>=2.0",
+    "requests>=2.25"
+]
+
+[project.scripts]
+pypircgen = "your_main_script:main"  # Replace `your_main_script` with your .py file name (without .py)
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
